@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import ProductModal from "../Modals/ProductModal";
 import apiRequest from "../../services/apiRequest";
 import SearchSelect from "../../ui-components/SearchSelect";
@@ -6,7 +6,7 @@ import Lottie from "lottie-react";
 import ProductCards from "../ProductCards";
 
 
-function ProductCollection({animationData, collectionId}) {
+function ProductCollection({ animationData, collectionId }) {
 
 
     const [detailCollection, setDetailCollection] = useState([]);
@@ -102,27 +102,29 @@ function ProductCollection({animationData, collectionId}) {
         <div className={"container"}>
             <div className="mr-8 flex justify-center items-center z-0 flex-col opacity-90 ">
                 {/* SearchSelect  */}
-                <div className="flex justify-center gap-2 z-40 w-96 mt-12">
+                <div className="flex flex-col mb-4 md:flex-row justify-center items-center mt-12 space-y-2 md:space-y-0 md:space-x-2">
                     <SearchSelect
                         options={tagsOptions}
                         value={selectedTags}
                         onChange={setSelectedTags}
                         isMulti
                         label={"Select product by tag"}
+                        
                     />
                     <SearchSelect
                         options={[
-                            {value: "default", label: "Default"},
-                            {value: "alphabetical", label: "Sort Alphabetically"},
+                            { value: "default", label: "Default" },
+                            { value: "alphabetical", label: "Sort Alphabetically" },
                         ]}
                         value={sortByAlphabetical ? {
                             value: "alphabetical",
                             label: "Sort Alphabetically"
-                        } : {value: "default", label: "Default"}}
+                        } : { value: "default", label: "Default" }}
                         onChange={(selectedOption) => {
                             setSortByAlphabetical(selectedOption.value === "alphabetical");
                         }}
                         label={"Order by"}
+                        
                     />
                 </div>
                 {/* Lottie animation */}
@@ -138,7 +140,7 @@ function ProductCollection({animationData, collectionId}) {
                 {/* ProductCards */}
                 {showCards && (
                     <ProductCards items={currentItems} setSelectedProductId={setSelectedProductId}
-                                  setOpenDetail={setOpenDetail}/>
+                        setOpenDetail={setOpenDetail} />
                 )}
                 {/* Pagination buttons */}
                 <div className="flex justify-center mt-4 z-40 gap-4">
