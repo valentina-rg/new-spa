@@ -35,8 +35,8 @@ const Header = () => {
                         B&B
                     </span>
                         <div className={"leading-[20px]"}>
-                            <h2 className={"text-xl text-yellow-300 font-[700] mr-2"}>Your shop online</h2>
-                            <p className={"text-yellow-300 text-[14px] font-[500]"}>Shop with ease
+                            <h2 className={"text-xl text-yellow-300 font-[700] mr-2"}>B&B Bazaar</h2>
+                            <p className={"text-yellow-300 text-[16px] font-[500]"}>Shop with ease
                             </p>
                         </div>
                     </div>

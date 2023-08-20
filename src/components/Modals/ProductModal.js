@@ -43,7 +43,7 @@ function ProductModal({ open, toggleOpen, productId }) {
                     <div className="mt-4">
                         {productDetails.variants?.map((variant) => (
                             <div key={variant.id} className="flex justify-between items-center border-b py-2">
-                                <p>Prezzo:</p>
+                                <p>Price:</p>
                                 <p className="font-semibold">
                                     {hasDifferentPrices(productDetails) && parseFloat(variant.price) === findLowestPrice(productDetails) && <i className={"ri-heart-fill text-indigo-500"}>(Sale!)</i> }
                                     {hasDifferentPrices(productDetails) && parseFloat(variant.price) === findHighestPrice(productDetails) && (
