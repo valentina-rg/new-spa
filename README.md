@@ -18,6 +18,10 @@ For Linux only:
 
 rm -rf node_modules package-lock. json && npm install && npm start
 
+If sh: react-scripts: command not found after running npm start and node_modules directory doesn't exists:
+
+- run first npm install
+
 ## Technologies
 
 - React: A JavaScript library for building user interfaces, providing a dynamic and efficient way to create interactive components.
