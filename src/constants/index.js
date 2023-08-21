@@ -9,7 +9,7 @@ export const findLowestPrice = (productDetails) => {
 
     let lowestPrice = null;
 
-    productDetails.variants.forEach((variant) => {
+    productDetails.variants?.forEach((variant) => {
         const price = parseFloat(variant.price);
         if (lowestPrice === null || price < lowestPrice) {
             lowestPrice = price;
@@ -24,7 +24,7 @@ export const findHighestPrice = (productDetails) => {
 
     let highestPrice = null;
 
-    productDetails.variants.forEach((variant) => {
+    productDetails.variants?.forEach((variant) => {
         const price = parseFloat(variant.price);
         if (highestPrice === null || price > highestPrice) {
             highestPrice = price;
@@ -39,7 +39,7 @@ export const hasDifferentPrices = (productDetails) => {
 
     const uniquePrices = new Set();
 
-    productDetails.variants.forEach((variant) => {
+    productDetails.variants?.forEach((variant) => {
         const price = parseFloat(variant.price);
         uniquePrices.add(price);
     });

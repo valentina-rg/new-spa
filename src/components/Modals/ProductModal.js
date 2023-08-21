@@ -21,8 +21,6 @@ function ProductModal({ open, toggleOpen, productId }) {
         }
     }, [open, productId]);
 
-    console.log({ productDetails });
-
 
 
     return (
